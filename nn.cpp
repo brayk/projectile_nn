@@ -16,8 +16,8 @@
 #include <cstdlib>
 using namespace std;
 
-#define NumOfCols    3       /* number of layers +1  i.e, include input layer */
-#define NumOfRows    5       /* max number of rows net +1, last is bias node  */
+#define NumOfCols    4       /* number of layers +1  i.e, include input layer */
+#define NumOfRows    6       /* max number of rows net +1, last is bias node  */
 
 /********************
 
@@ -28,12 +28,13 @@ using namespace std;
 #define NumINs       3       /* number of inputs, not including bias node     */
 
 #define NumNodes1    4       /* col 1 - must equal NumINs+1     */
-#define NumNodes2    5       /* col 2 - hidden layer 1, etc.    */
-#define NumNodes3    2       /* output layer must equal NumOUTs */
+#define NumNodes2    6       /* col 2 - hidden layer 1, etc.    */
+#define NumNodes3    6       /* output layer must equal NumOUTs */
+#define NumNodes4    2       /* NEW OUTPUTLAYER                                 */
+
 
 #define NumOUTs      2       /* number of outputs, not including bias node    */
 // UNSED
-#define NumNodes4    0       /*                                 */
 #define NumNodes5    0       /* note: layers include bias node  */
 #define NumNodes6    0
 
@@ -43,10 +44,10 @@ using namespace std;
 
 
 
-#define Criteria     0.05    /* all outputs must be within this to terminate  */
-#define TestCriteria 0.1     /* all outputs must be within this to generalize */
-#define MaxIterate   100000  /* maximum number of iterations                */
-#define LearningRate 0.2     /* most books suggest 0.3                        */
+#define Criteria     .5    /* all outputs must be within this to terminate  */
+#define TestCriteria 1     /* all outputs must be within this to generalize */
+#define MaxIterate   10000000  /* maximum number of iterations                */
+#define LearningRate 0.3     /* most books suggest 0.3                        */
 #define ReportIntv   101     /* print report every time this many cases done*/
 #define Momentum     0.9     /* momentum constant                             */
 

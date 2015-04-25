@@ -16,8 +16,15 @@
 #include <cstdlib>
 using namespace std;
 
-#define NumOfCols    6       /* number of layers +1  i.e, include input layer */
-#define NumOfRows    5       /* max number of rows net +1, last is bias node  */
+// Learning Setttings
+#define MaxIterate   1000000  /* maximum number of iterations                */
+#define LearningRate 0.4     /* most books suggest 0.3                        */
+#define ReportIntv   101     /* print report every time this many cases done*/
+#define Momentum     0.3     /* momentum constant                             */
+
+// Architecture Settings
+#define NumOfCols    3       /* number of layers +1  i.e, include input layer */
+#define NumOfRows    4       /* max number of rows net +1, last is bias node  */
 
 /********************
 
@@ -25,20 +32,17 @@ using namespace std;
 2 Outputs - Average and Median
 
 ********************/
-#define NumINs       3       /* number of inputs, not including bias node     */
-#define NumNodes1    4       /* col 1 - must equal NumINs+1     */
-///// DO NOT THE TWo TOUCH ABOVE
 
-#define NumNodes2    5       /* col 2 - hidden layer 1, etc.    */
-#define NumNodes3    5       /* output layer must equal NumOUTs */
-#define NumNodes4    5       /* NEW OUTPUTLAYER                                 */
-#define NumNodes5    5       /* note: layers include bias node  */
-
-
-///// DO NOT TOUCH BELOW THIS
-#define NumOUTs      2       /* number of outputs, not including bias node    */
-// UNSED
+#define NumNodes2    3       /* col 2 - hidden layer 1, etc.    */
+#define NumNodes3    2       /* output layer must equal NumOUTs */
+#define NumNodes4    2       /* NEW OUTPUTLAYER                                 */
+#define NumNodes5    2       /* note: layers include bias node  */
 #define NumNodes6    2
+
+// Dont touch next three for this problem
+#define NumOUTs      2       /* number of outputs, not including bias node    */
+#define NumINs       3       /* number of inputs, not including bias node     */
+#define NumNodes1    3       /* col 1 - must equal NumINs+1     */
 
 
 #define TrainCases   50      /* number of training cases        */
@@ -46,13 +50,8 @@ using namespace std;
 
 
 
-#define Criteria     .5    /* all outputs must be within this to terminate  */
-#define TestCriteria 1     /* all outputs must be within this to generalize */
-#define MaxIterate   1000000  /* maximum number of iterations                */
-#define LearningRate 0.1     /* most books suggest 0.3                        */
-#define ReportIntv   101     /* print report every time this many cases done*/
-#define Momentum     0.8     /* momentum constant                             */
-
+#define Criteria     1    /* all outputs must be within this to terminate  */
+#define TestCriteria 2     /* all outputs must be within this to generalize */
 // network topology by column ------------------------------------
 #define TrainFile    "statsA.dat"  /* file containing training data */
 #define TestFile     "statsB.dat"   /* file containing testing data  */

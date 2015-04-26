@@ -36,7 +36,7 @@ using namespace std;
 #define NumNodes2    10       /* col 2 - hidden layer 1, etc.    */
 #define NumNodes3    20       /* output layer must equal NumOUTs */
 #define NumNodes4    25      /* NEW OUTPUTLAYER                                 */
-#define NumNodes5    20       /* note: layers include bias node  */
+#define NumNodes5    1       /* note: layers include bias node  */
 #define NumNodes6    1
 
 // Dont touch next three for this problem

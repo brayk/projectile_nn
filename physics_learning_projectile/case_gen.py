@@ -19,19 +19,20 @@ TESTING_AMOUNT  = 50
 # 4 Inputs - Constant, Angle from ground (firing angle will be this angle 90-theta), distance pulled
 
 
+GRAVITY = 9.81;
 
 def findDistance(constant, angle, distance, mass):
     energy = .5 * constant * (pow(distance,2))
     velocityXY = math.sqrt((2*energy)/mass)
 
-    velocityY = velocityXY * math.sin(angle)
-    velocityX = velocityXY * math.cos(angle)
+    velocityY = velocityXY * math.sin(math.radians(angle))
+    velocityX = velocityXY * math.cos(math.radians(angle))
 
 #    print("VelocityXY: %f" % velocityXY)
 ##    print("VelocityY: %f" % velocityY)
 #    print("VelocityX: %f" % velocityX)
 
-    time = velocityY / (.5*9.81)
+    time = velocityY / (.5* GRAVITY)
     print(time)
     traveled = velocityX * time
     return traveled
@@ -41,7 +42,6 @@ def findDistance(constant, angle, distance, mass):
 
 
 # INPUTS
-GRAVITY = 9.81;
 
 CONSTANT = []
 ANGLE = []
@@ -64,7 +64,7 @@ for i in range(1,(TRAINING_AMOUNT + TESTING_AMOUNT + 1)):
     CONSTANT.append(constant)
 
 for i in range(1,(TRAINING_AMOUNT + TESTING_AMOUNT + 1)):
-    angle = random.uniform(0, 90)
+    angle = random.uniform(1, 89)
     ANGLE.append(angle)
 
 for i in range(1,(TRAINING_AMOUNT + TESTING_AMOUNT + 1)):

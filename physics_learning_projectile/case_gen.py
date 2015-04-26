@@ -60,19 +60,19 @@ count = 0;
 
 
 for i in range(1,(TRAINING_AMOUNT + TESTING_AMOUNT + 1)):
-    constant = random.uniform(0, 400)
+    constant = random.uniform(100, 400)
     CONSTANT.append(constant)
 
 for i in range(1,(TRAINING_AMOUNT + TESTING_AMOUNT + 1)):
-    angle = random.uniform(1, 89)
+    angle = random.uniform(25, 70)
     ANGLE.append(angle)
 
 for i in range(1,(TRAINING_AMOUNT + TESTING_AMOUNT + 1)):
-    distance = random.uniform(0, .1) # in meters
+    distance = random.uniform(2, 5) # in meters
     DISTANCE.append(distance)
 
 for i in range(1,(TRAINING_AMOUNT + TESTING_AMOUNT + 1)):
-    mass = random.uniform(0, 1) # in kg
+    mass = random.uniform(1, 5) # in kg
     MASS.append(mass)
 
 

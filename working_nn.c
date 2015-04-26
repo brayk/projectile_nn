@@ -12,7 +12,7 @@ using namespace std;
 #define Criteria     2.5    /* all outputs must be within this to terminate  */
 #define TestCriteria 5     /* all outputs must be within this to generalize */
 #define MaxIterate   10000000  /* maximum number of iterations                */
-#define ReportIntv   1000001     /* print report every time this many cases done*/
+#define ReportIntv   101     /* print report every time this many cases done*/
 #define Momentum     0.9     /* momentum constant                             */
 #define TrainCases   50      /* number of training cases        */
 #define TestCases    10       /* number of test cases            */

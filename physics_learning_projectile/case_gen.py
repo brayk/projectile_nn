@@ -14,7 +14,7 @@ import math
 
 #SETTINGS
 TRAINING_AMOUNT = 50
-TESTING_AMOUNT  = 50
+TESTING_AMOUNT  = 10
 
 # 4 Inputs - Constant, Angle from ground (firing angle will be this angle 90-theta), distance pulled
 
@@ -33,7 +33,7 @@ def findDistance(constant, angle, distance, mass):
 #    print("VelocityX: %f" % velocityX)
 
     time = velocityY / (.5* GRAVITY)
-    print(time)
+#    print(time)
     traveled = velocityX * time
     return traveled
     # 0 = velocityY * t - .5*-9.81 * t^2

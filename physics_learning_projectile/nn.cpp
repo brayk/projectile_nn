@@ -18,13 +18,13 @@ using namespace std;
 
 // Learning Setttings
 #define MaxIterate   10000000  /* maximum number of iterations                */
-#define LearningRate 0.2     /* most books suggest 0.3                        */
+#define LearningRate 0.05     /* most books suggest 0.3                        */
 #define ReportIntv   100001     /* print report every time this many cases done*/
 #define Momentum     0.9     /* momentum constant                             */
 
 // Architecture Settings
 #define NumOfCols    4       /* number of layers +1  i.e, include input layer */
-#define NumOfRows    10       /* max number of rows net +1, last is bias node  */
+#define NumOfRows    25       /* max number of rows net +1, last is bias node  */
 
 /********************
 
@@ -34,9 +34,9 @@ using namespace std;
 ********************/
 
 #define NumNodes2    10       /* col 2 - hidden layer 1, etc.    */
-#define NumNodes3    10       /* output layer must equal NumOUTs */
-#define NumNodes4    1       /* NEW OUTPUTLAYER                                 */
-#define NumNodes5    1       /* note: layers include bias node  */
+#define NumNodes3    20       /* output layer must equal NumOUTs */
+#define NumNodes4    25      /* NEW OUTPUTLAYER                                 */
+#define NumNodes5    20       /* note: layers include bias node  */
 #define NumNodes6    1
 
 // Dont touch next three for this problem
@@ -50,8 +50,8 @@ using namespace std;
 
 
 
-#define Criteria     5  /* all outputs must be within this to terminate  */
-#define TestCriteria  10     /* all outputs must be within this to generalize */
+#define Criteria     7.5  /* all outputs must be within this to terminate  */
+#define TestCriteria  15     /* all outputs must be within this to generalize */
 // network topology by column ------------------------------------
 #define TrainFile    "statsA.dat"  /* file containing training data */
 #define TestFile     "statsB.dat"   /* file containing testing data  */

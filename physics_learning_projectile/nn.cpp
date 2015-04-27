@@ -23,7 +23,7 @@ using namespace std;
 #define Momentum     0.9     /* momentum constant                             */
 
 // Architecture Settings
-#define NumOfCols    4       /* number of layers +1  i.e, include input layer */
+#define NumOfCols    5       /* number of layers +1  i.e, include input layer */
 #define NumOfRows    25       /* max number of rows net +1, last is bias node  */
 
 /********************
